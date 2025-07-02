@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento de TCC - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Acompanhamento de TCC</h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="tccAcompanhamentoDetalhes" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações do TCC:</h3>
+                <p>Aluno: <strong><span id="acompanhamentoAluno"></span></strong></p>
+                <p>Título: <strong><span id="acompanhamentoTitulo"></span></strong></p>
+                <p>Status: <strong id="acompanhamentoStatus"></strong></p>
+                <p>Data de Aprovação da Proposta: <span id="acompanhamentoDataAprovacao"></span></p>
+            </div>
+
+            <h2>Histórico de Interações/Entregas</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo de Evento</th>
+                            <th>Descrição</th>
+                            <th>Documento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historicoInteracoes">
+                        </tbody>
+                </table>
+            </div>
+
+            <h2>Ações e Feedback</h2>
+            <form id="acompanhamentoForm" class="form-simple">
+                <div class="campo-grupo">
+                    <label for="feedbackAluno">Enviar Feedback ao Aluno:</label>
+                    <textarea id="feedbackAluno" placeholder="Comentários sobre o progresso, sugestões, etc." rows="6"></textarea>
+                </div>
+                <button type="button" id="btnEnviarFeedback" class="btn-primario">Enviar Feedback</button>
+                <p id="mensagemFeedbackSucesso" class="mensagem-sucesso"></p>
+                <p id="mensagemFeedbackErro" class="mensagem-erro"></p>
+            </form>
+
+            <h2 style="margin-top: 30px;">Gerenciar Status do TCC</h2>
+            <div class="form-simple">
+                 <div class="campo-grupo">
+                    <label for="novoStatusTCC">Mudar Status para:</label>
+                    <select id="novoStatusTCC" style="width: auto;">
+                        <option value="">Selecione</option>
+                        <option value="em_andamento">Em Andamento</option>
+                        <option value="revisao_final">Revisão Final</option>
+                        <option value="apto_defesa">Apto para Defesa</option>
+                        <option value="finalizado_aprovado">Finalizado (Aprovado)</option>
+                        <option value="finalizado_reprovado">Finalizado (Reprovado)</option>
+                    </select>
+                    <button type="button" id="btnMudarStatusTCC" class="btn-primario" style="width: auto; margin-left: 10px;">Aplicar</button>
+                 </div>
+                 <p id="mensagemStatusSucesso" class="mensagem-sucesso"></p>
+                 <p id="mensagemStatusErro" class="mensagem-erro"></p>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='tcc_meus_tccs_orientados_orientador.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

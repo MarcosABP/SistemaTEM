@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Coordenador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Dashboard do Coordenador</h1>
+            <div class="user-info">
+                <span>Olá, Coordenador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="dashboard-sections">
+            <div class="dashboard-card">
+                <h3>Validações Pendentes</h3>
+                <p>TCCs para validar: <strong>3</strong></p>
+                <p>Termos de Estágio para validar: <strong>2</strong></p>
+                <a href="#" id="dashboard-coordenador-tcc-validar-link" class="btn-link">Validar Propostas de TCC</a>
+                <a href="#" id="dashboard-coordenador-estagio-validar-link" class="btn-link">Validar Termos de Estágio</a>
+                <a href="#" class="btn-link">Validar Monitoria (Vagas/Candidatos)</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Gestão Administrativa</h3>
+                <a href="#" class="btn-link">Gerenciar Ciclos Acadêmicos</a>
+                <a href="#" class="btn-link">Agendar Defesas de TCC</a>
+                <a href="#" class="btn-link">Gerenciar Usuários e Acessos</a>
+                <a href="#" class="btn-link">Configurações do Sistema</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Notificações</h3>
+                <p>Você tem <strong>4 novas notificações</strong>.</p>
+                <a href="#" class="btn-link">Ver Notificações</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Outras Opções</h3>
+                <ul>
+                    <li><a href="#" class="btn-link">Emitir Certificados</a></li>
+                    <li><a href="#" class="btn-link">Enviar Feedback</a></li>
+                    <li><a href="#" class="btn-link">Minha Conta</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

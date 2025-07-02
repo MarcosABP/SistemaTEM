@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus TCCs Orientados - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Meus TCCs Orientados</h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <p class="mensagem-info">Lista dos TCCs que você está orientando.</p>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Título do TCC</th>
+                            <th>Status Atual</th>
+                            <th>Último Upload (Aluno)</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaTCCsOrientados">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='dashboard_orientador.html'">Voltar ao Dashboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

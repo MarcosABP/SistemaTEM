@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Oferta de Monitoria - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-azul">Cadastrar Nova Oferta de Monitoria</h1>
+        <p>Preencha os detalhes para criar uma nova vaga de monitoria.</p>
+
+        <form id="formCadastrarOfertaMonitoria" class="form-simple">
+            <div class="campo-grupo">
+                <label for="disciplinaOferta">Disciplina:</label>
+                <select id="disciplinaOferta" required>
+                    <option value="">Selecione a disciplina</option>
+                    <option value="Calculo I">Cálculo I</option>
+                    <option value="Algoritmos e Estruturas de Dados">Algoritmos e Estruturas de Dados</option>
+                    <option value="Fisica Experimental">Física Experimental</option>
+                    <option value="Circuitos Eletricos">Circuitos Elétricos</option>
+                </select>
+            </div>
+            <div class="campo-grupo">
+                <label for="numVagas">Número de Vagas:</label>
+                <input type="number" id="numVagas" min="1" value="1" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="periodoInscricaoInicio">Período de Inscrição (Início):</label>
+                <input type="date" id="periodoInscricaoInicio" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="periodoInscricaoFim">Período de Inscrição (Fim):</label>
+                <input type="date" id="periodoInscricaoFim" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="horariosMonitoria">Horários da Monitoria:</label>
+                <textarea id="horariosMonitoria" placeholder="Ex: Segunda e Quarta, das 14h às 16h, na sala B3." rows="4" required></textarea>
+            </div>
+            <div class="campo-grupo">
+                <label for="requisitosCandidatura">Requisitos para Candidatura:</label>
+                <textarea id="requisitosCandidatura" placeholder="Ex: Ter sido aprovado em X com nota maior ou igual a Y." rows="4"></textarea>
+            </div>
+            <div class="campo-grupo">
+                <label for="descricaoOferta">Descrição Adicional da Oferta (Opcional):</label>
+                <textarea id="descricaoOferta" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primario">Publicar Oferta</button>
+        </form>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+        
+        <button class="btn-voltar" onclick="window.location.href='dashboard_orientador.html'">Voltar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

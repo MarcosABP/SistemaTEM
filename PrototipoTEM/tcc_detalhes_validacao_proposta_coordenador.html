@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Proposta de TCC - [Nome do Aluno]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Validar Proposta de TCC</h1>
+            <div class="user-info">
+                <span>Olá, Coordenador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="propostaDetalhesCoordenador" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações da Proposta:</h3>
+                <p>Aluno: <strong><span id="coordPropostaAluno"></span></strong></p>
+                <p>Título: <strong><span id="coordPropostaTitulo"></span></strong></p>
+                <p>Resumo: <span id="coordPropostaResumo"></span></p>
+                <p>Orientador Sugerido/Definido: <strong><span id="coordPropostaOrientador"></span></strong></p>
+                <p>Feedback do Orientador: <em id="coordFeedbackOrientador"></em></p>
+                <p>Decisão do Orientador: <strong><span id="coordDecisaoOrientador"></span></strong></p>
+            </div>
+
+            <h2>Área de Validação do Coordenador</h2>
+            <form id="validacaoCoordenadorForm" class="form-simple">
+                <div class="campo-grupo">
+                    <label for="feedbackCoordenador">Feedback/Observações do Coordenador (Opcional):</label>
+                    <textarea id="feedbackCoordenador" placeholder="Adicione observações ou feedback adicional..." rows="6"></textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Decisão Final:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <label><input type="radio" name="decisaoFinal" value="aprovada_coordenador" required> Validar Proposta (Aprovar)</label>
+                        <label><input type="radio" name="decisaoFinal" value="reprovada_coordenador"> Reprovar Proposta</label>
+                        <label><input type="radio" name="decisaoFinal" value="ajustes_coordenador"> Solicitar Ajustes Adicionais</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primario">Registrar Validação</button>
+            </form>
+            <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+            <p id="mensagemErro" class="mensagem-erro"></p>
+            
+            <button class="btn-voltar" onclick="window.location.href='tcc_validar_propostas_coordenador.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

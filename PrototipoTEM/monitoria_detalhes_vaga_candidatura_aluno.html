@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Vaga de Monitoria - Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Detalhes da Vaga de Monitoria</h1>
+            <div class="user-info">
+                <span>Olá, Aluno(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="detalhesVagaMonitoria" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações da Vaga:</h3>
+                <p>Disciplina: <strong><span id="vagaDisciplina"></span></strong></p>
+                <p>Orientador: <strong><span id="vagaOrientador"></span></strong></p>
+                <p>Vagas Oferecidas: <span id="vagaVagasOferecidas"></span></p>
+                <p>Horários: <span id="vagaHorarios"></span></p>
+                <p>Requisitos: <span id="vagaRequisitos"></span></p>
+                <p>Período de Inscrição: <span id="vagaPeriodoInscricao"></span></p>
+            </div>
+
+            <h2>Área de Candidatura</h2>
+            <div id="areaCandidatura">
+                </div>
+            <p id="mensagemCandidaturaInfo" class="mensagem-info" style="display: none;"></p>
+            
+            <button class="btn-voltar" onclick="window.location.href='monitoria_vagas_disponiveis_aluno.html'">Voltar às Vagas</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

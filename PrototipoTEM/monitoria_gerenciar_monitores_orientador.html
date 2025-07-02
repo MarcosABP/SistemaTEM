@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Monitores Ativos - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Meus Monitores Ativos</h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <p class="mensagem-info">Lista dos alunos que são seus monitores ativos.</p>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Disciplina</th>
+                            <th>Período</th>
+                            <th>Status Monitoria</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaMeusMonitores">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='dashboard_orientador.html'">Voltar ao Dashboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

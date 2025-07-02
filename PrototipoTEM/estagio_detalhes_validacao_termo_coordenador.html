@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Termo de Estágio - Coordenador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Validar Termo de Compromisso de Estágio</h1>
+            <div class="user-info">
+                <span>Olá, Coordenador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="termoEstagioDetalhes" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações do Estágio:</h3>
+                <p>Aluno: <strong><span id="termoAluno"></span></strong></p>
+                <p>Empresa: <strong><span id="termoEmpresa"></span></strong></p>
+                <p>Supervisor na Empresa: <span id="termoSupervisor"></span></p>
+                <p>Período: <span id="termoPeriodo"></span></p>
+                <p>Carga Horária Semanal: <span id="termoCargaHoraria"></span> horas</p>
+                <p>Descrição das Atividades: <span id="termoDescricaoAtividades"></span></p>
+                <p>Termo de Compromisso: <a href="#" id="linkTermoCompromisso" class="link-azul" onclick="alert('Simulando download do Termo de Compromisso.');">Download PDF</a></p>
+            </div>
+
+            <h2>Área de Validação</h2>
+            <form id="formValidacaoTermo" class="form-simple">
+                <div class="campo-grupo">
+                    <label for="feedbackCoordenadorTermo">Comentários/Correções (Opcional):</label>
+                    <textarea id="feedbackCoordenadorTermo" placeholder="Adicione observações ou correções a serem feitas no termo." rows="6"></textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Decisão:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <label><input type="radio" name="decisaoTermo" value="aprovado" required> Aprovar Termo</label>
+                        <label><input type="radio" name="decisaoTermo" value="solicitar_correcoes"> Solicitar Correções</label>
+                        <label><input type="radio" name="decisaoTermo" value="reprovado"> Reprovar Termo</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primario">Registrar Validação</button>
+            </form>
+            <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+            <p id="mensagemErro" class="mensagem-erro"></p>
+            
+            <button class="btn-voltar" onclick="window.location.href='estagio_validar_termos_coordenador.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

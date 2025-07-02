@@ -1,0 +1,355 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F8FF; /* Azul claro de fundo */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #FFFFFF; /* Branco para os containers principais */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 80vh;
+}
+
+h1, h2 {
+    color: #0056b3; /* Azul escuro para títulos */
+    margin-bottom: 25px;
+}
+
+.header-dashboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.header-dashboard h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header-dashboard .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header-dashboard .user-info span {
+    margin-right: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-sair {
+    background-color: #dc3545; /* Vermelho para "Sair" */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.btn-sair:hover {
+    background-color: #c82333;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.campo-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.campo-grupo input[type="email"],
+.campo-grupo input[type="password"],
+.campo-grupo input[type="text"],
+.campo-grupo select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #B0E0E6; /* Azul claro */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.btn-primario, .btn-secundario {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primario:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+}
+
+.btn-secundario {
+    background-color: #6c757d; /* Cinza para secundário */
+    margin-top: 10px;
+}
+
+.btn-secundario:hover {
+    background-color: #5a6268;
+}
+
+.link-acao {
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+.link-acao a {
+    color: #007bff; /* Azul vibrante para links */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.link-acao a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.mensagem-erro {
+    color: #dc3545; /* Vermelho para erros */
+    margin-top: 15px;
+    font-size: 0.9em;
+    display: none; /* Inicia oculto */
+}
+
+.mensagem-sucesso {
+    color: #28a745; /* Verde para sucesso */
+    margin-top: 15px;
+    font-size: 0.9em;
+    display: none; /* Inicia oculto */
+}
+
+.dashboard-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.dashboard-card {
+    background-color: #F8F8FF; /* Azul muito claro, quase branco para cards */
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.dashboard-card p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.dashboard-card .btn-link {
+    display: inline-block;
+    background-color: #28a745; /* Verde para ação positiva */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.dashboard-card .btn-link:hover {
+    background-color: #218838;
+}
+
+/* Estilo para links em navbars ou listas dentro do dashboard */
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-nav ul li {
+    margin-bottom: 10px;
+}
+
+.dashboard-nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #e9f5ff; /* Azul clarinho para itens de menu */
+    color: #0056b3;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dashboard-nav ul li a:hover {
+    background-color: #d1e9ff;
+    color: #003a70;
+}
+
+/* Estilos para telas de detalhes/formulários internos */
+.content-area {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.content-area h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.info-display p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.info-display strong {
+    color: #0056b3;
+}
+
+.form-simple .campo-grupo textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #B0E0E6;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn-voltar {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 20px;
+    float: left;
+    transition: background-color 0.2s;
+}
+
+.btn-voltar:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .container, .dashboard-container {
+        padding: 20px;
+        width: 95%;
+    }
+    .dashboard-sections {
+        grid-template-columns: 1fr;
+    }
+}
+
+.table-responsive {
+    overflow-x: auto; /* Garante scroll em telas pequenas para tabelas */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #E0EFFF; /* Azul claro para cabeçalhos de tabela */
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Linhas alternadas para melhor leitura */
+}
+
+.data-table tbody tr:hover {
+    background-color: #f0f8ff; /* Leve destaque ao passar o mouse */
+}
+
+.data-table .btn-table-action {
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    display: inline-block; /* Para que o padding funcione corretamente */
+}
+
+.data-table .btn-table-action:hover {
+    background-color: #0056b3;
+}
+
+/* Para mensagens de informação */
+.mensagem-info {
+    color: #0056b3;
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: left;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-azul">Recuperar Senha</h1>
+        <p>Informe seu e-mail institucional para receber um link de redefinição.</p>
+        <form id="recuperarSenhaForm">
+            <div class="campo-grupo">
+                <label for="emailRecuperacao">Email Institucional:</label>
+                <input type="email" id="emailRecuperacao" placeholder="seu.email@poli.upe.br" required>
+            </div>
+            <button type="submit" class="btn-primario">Enviar Link</button>
+        </form>
+        <p class="link-acao"><a href="index.html">Voltar ao Login</a></p>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

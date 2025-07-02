@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Proposta - [Nome do Aluno]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Avaliar Proposta de TCC</h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="propostaDetalhes" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações da Proposta:</h3>
+                <p>Aluno: <strong><span id="propostaAluno"></span></strong></p>
+                <p>Título: <strong><span id="propostaTitulo"></span></strong></p>
+                <p>Resumo: <span id="propostaResumo"></span></p>
+                <p>Objetivos: <span id="propostaObjetivos"></span></p>
+                <p>Metodologia: <span id="propostaMetodologia"></span></p>
+                <p>Palavras-chave: <span id="propostaPalavrasChave"></span></p>
+                <p>Orientador Sugerido: <strong><span id="propostaOrientadorSugerido"></span></strong></p>
+            </div>
+
+            <h2>Área de Avaliação</h2>
+            <form id="avaliacaoPropostaForm" class="form-simple">
+                <div class="campo-grupo">
+                    <label for="feedbackOrientador">Feedback/Comentários para o Aluno:</label>
+                    <textarea id="feedbackOrientador" placeholder="Forneça um feedback detalhado..." rows="8"></textarea>
+                </div>
+
+                <div class="campo-grupo">
+                    <label>Decisão:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <label><input type="radio" name="decisao" value="aprovada" required> Aprovar Proposta</label>
+                        <label><input type="radio" name="decisao" value="reprovada"> Reprovar Proposta</label>
+                        <label><input type="radio" name="decisao" value="ajustes_solicitados"> Solicitar Ajustes</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primario">Registrar Avaliação</button>
+            </form>
+            <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+            <p id="mensagemErro" class="mensagem-erro"></p>
+            
+            <button class="btn-voltar" onclick="window.location.href='tcc_avaliar_propostas_orientador.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Candidaturas - Monitoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Candidaturas para Monitoria: <span id="disciplinaCandidaturas"></span></h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <p class="mensagem-info">Avalie os candidatos para esta oferta de monitoria.</p>
+            <p>Vagas Oferecidas: <strong id="vagasOferecidasInfo"></strong> | Candidatos Aprovados: <strong id="candidatosAprovadosInfo"></strong></p>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Data da Candidatura</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaCandidatosMonitoria">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='monitoria_gerenciar_minhas_ofertas_orientador.html'">Voltar às Minhas Ofertas</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-azul">Cadastro de Aluno</h1>
+        <p>Preencha os campos abaixo para criar sua conta de aluno.</p>
+        <form id="cadastroForm">
+            <div class="campo-grupo">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="emailCadastro">Email Institucional:</label>
+                <input type="email" id="emailCadastro" placeholder="seu.email@poli.upe.br" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="senhaCadastro">Senha:</label>
+                <input type="password" id="senhaCadastro" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="confirmarSenhaCadastro">Confirmar Senha:</label>
+                <input type="password" id="confirmarSenhaCadastro" required>
+            </div>
+            <button type="submit" class="btn-primario">Cadastrar</button>
+        </form>
+        <p class="link-acao">Já tenho cadastro. <a href="index.html">Voltar ao Login</a></p>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

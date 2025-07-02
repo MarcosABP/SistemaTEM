@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Dashboard do Aluno</h1>
+            <div class="user-info">
+                <span>Olá, Aluno(a)!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="dashboard-sections">
+            <div class="dashboard-card">
+                <h3>Meus TCCs</h3>
+                <p>Status atual: <strong>Em Andamento</strong></p>
+                <a href="#" id="dashboard-aluno-tcc-link" class="btn-link">Gerenciar TCC</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Monitorias</h3>
+                <p>Procure vagas ou gerencie suas candidaturas.</p>
+                <a href="#" id="dashboard-aluno-monitoria-vagas-link" class="btn-link">Buscar Vagas de Monitoria</a>
+                <a href="#" id="dashboard-aluno-monitoria-candidaturas-link" class="btn-link">Minhas Candidaturas</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Estágios</h3>
+                <p>Status atual: <strong>Aguardando Termo</strong></p>
+                <a href="#" id="dashboard-aluno-estagio-inscrever-link" class="btn-link">Inscrever-me para Estágio</a>
+                <a href="#" id="dashboard-aluno-estagio-meus-link" class="btn-link">Meus Estágios</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Notificações</h3>
+                <p>Você tem <strong>3 novas notificações</strong>.</p>
+                <a href="#" class="btn-link">Ver Notificações</a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Outras Opções</h3>
+                <ul>
+                    <li><a href="#" class="btn-link">Consultar Editais e Vagas Públicas</a></li>
+                    <li><a href="#" class="btn-link">Histórico de Atividades</a></li>
+                    <li><a href="#" class="btn-link">Emitir Certificados</a></li>
+                    <li><a href="#" class="btn-link">Enviar Feedback</a></li>
+                    <li><a href="#" class="btn-link">Minha Conta</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

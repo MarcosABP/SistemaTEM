@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Desempenho do Monitor - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-azul">Avaliar Desempenho do Monitor</h1>
+        
+        <div id="infoMonitorAvaliacao" class="info-display" style="text-align: left; margin-bottom: 20px;">
+            <p>Aluno: <strong><span id="monitorNome"></span></strong></p>
+            <p>Disciplina: <strong><span id="monitorDisciplina"></span></strong></p>
+            <p>Período: <span id="monitorPeriodo"></span></p>
+        </div>
+
+        <form id="formAvaliacaoDesempenho" class="form-simple">
+            <div class="campo-grupo">
+                <label for="notaDesempenho">Nota de Desempenho (0-10):</label>
+                <input type="number" id="notaDesempenho" min="0" max="10" step="0.1" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="comentariosFinais">Comentários Finais sobre o Desempenho:</label>
+                <textarea id="comentariosFinais" placeholder="Ex: Demonstrou proatividade, boa didática..." rows="6" required></textarea>
+            </div>
+            <div class="campo-grupo">
+                <label>Recomendaria para futuras monitorias?</label>
+                <div style="display: flex; gap: 15px; margin-top: 10px;">
+                    <label><input type="radio" name="recomendacao" value="sim" required> Sim</label>
+                    <label><input type="radio" name="recomendacao" value="nao"> Não</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-primario">Registrar Avaliação Final</button>
+        </form>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+        
+        <button class="btn-voltar" onclick="window.location.href='monitoria_gerenciar_monitores_orientador.html'">Voltar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas de Monitoria - Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Vagas de Monitoria</h1>
+            <div class="user-info">
+                <span>Olá, Aluno(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <p class="mensagem-info">Consulte as vagas de monitoria disponíveis e candidate-se.</p>
+
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label for="filtroDisciplina">Filtrar por Disciplina:</label>
+                <input type="text" id="filtroDisciplina" placeholder="Ex: Cálculo I" style="width: 200px; padding: 8px; border-radius: 5px; border: 1px solid #B0E0E6;">
+                <button class="btn-primario" style="width: auto; padding: 8px 15px; margin-left: 10px;">Buscar</button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Disciplina</th>
+                            <th>Orientador</th>
+                            <th>Vagas</th>
+                            <th>Período de Inscrição</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaVagasMonitoria">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='dashboard_aluno.html'">Voltar ao Dashboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliar Relatório de Estágio - Orientador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Avaliar Relatório Final de Estágio</h1>
+            <div class="user-info">
+                <span>Olá, Orientador(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="relatorioEstagioDetalhes" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações do Estágio:</h3>
+                <p>Aluno: <strong><span id="relatorioAluno"></span></strong></p>
+                <p>Empresa: <strong><span id="relatorioEmpresa"></span></strong></p>
+                <p>Período: <span id="relatorioPeriodo"></span></p>
+                <p>Relatório Final: <a href="#" id="linkRelatorioFinal" class="link-azul" onclick="alert('Simulando download do Relatório Final.');">Download PDF</a></p>
+            </div>
+
+            <h2>Área de Avaliação</h2>
+            <form id="formAvaliacaoRelatorio" class="form-simple">
+                <div class="campo-grupo">
+                    <label for="notaFinal">Nota Final (0-10):</label>
+                    <input type="number" id="notaFinal" min="0" max="10" step="0.1" required>
+                </div>
+                <div class="campo-grupo">
+                    <label for="feedbackOrientadorRelatorio">Comentários/Parecer Final:</label>
+                    <textarea id="feedbackOrientadorRelatorio" placeholder="Forneça seu parecer sobre o relatório e o desempenho no estágio." rows="8" required></textarea>
+                </div>
+                
+                <div class="campo-grupo">
+                    <label>Decisão:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <label><input type="radio" name="decisaoRelatorio" value="aprovado" required> Aprovar Estágio</label>
+                        <label><input type="radio" name="decisaoRelatorio" value="reprovado"> Reprovar Estágio</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primario">Registrar Avaliação Final</button>
+            </form>
+            <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+            <p id="mensagemErro" class="mensagem-erro"></p>
+            
+            <button class="btn-voltar" onclick="window.location.href='estagio_avaliar_relatorios_orientador.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

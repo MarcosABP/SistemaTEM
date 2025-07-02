@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Candidatura - Monitoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo-azul">Candidatura para Monitoria</h1>
+        <p>Preencha os dados e anexe os documentos necessários para sua candidatura.</p>
+        
+        <div id="infoVagaCandidatura" class="info-display" style="text-align: left; margin-bottom: 20px;">
+            <p>Disciplina: <strong><span id="formCandidaturaDisciplina"></span></strong></p>
+            <p>Orientador: <strong><span id="formCandidaturaOrientador"></span></strong></p>
+        </div>
+
+        <form id="formCandidaturaMonitoria" class="form-simple">
+            <div class="campo-grupo">
+                <label for="historicoEscolar">Histórico Escolar (PDF):</label>
+                <input type="file" id="historicoEscolar" accept=".pdf" required>
+            </div>
+            <div class="campo-grupo">
+                <label for="cartaIntencoes">Carta de Intenções (Opcional - PDF):</label>
+                <input type="file" id="cartaIntencoes" accept=".pdf">
+            </div>
+            <div class="campo-grupo">
+                <label for="disponibilidadeHorarios">Disponibilidade de Horários:</label>
+                <textarea id="disponibilidadeHorarios" placeholder="Ex: Terças e Quintas à tarde; Sextas de manhã." rows="4" required></textarea>
+            </div>
+            <div class="campo-grupo">
+                <label for="observacoesAdicionais">Observações Adicionais (Opcional):</label>
+                <textarea id="observacoesAdicionais" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primario">Enviar Candidatura</button>
+        </form>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+        <p id="mensagemErro" class="mensagem-erro"></p>
+        
+        <button class="btn-voltar" onclick="window.location.href='monitoria_detalhes_vaga_candidatura_aluno.html'">Voltar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

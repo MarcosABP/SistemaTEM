@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhamento de Estágio - Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="header-dashboard">
+            <h1>Acompanhamento do Estágio</h1>
+            <div class="user-info">
+                <span>Olá, Aluno(a) Exemplo!</span>
+                <button class="btn-sair">Sair</button>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <div id="estagioAcompanhamentoDetalhes" class="info-display" style="text-align: left; margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 8px;">
+                <h3>Informações Gerais do Estágio:</h3>
+                <p>Empresa: <strong><span id="acompanhamentoEmpresa"></span></strong></p>
+                <p>Supervisor na Empresa: <strong><span id="acompanhamentoSupervisor"></span></strong></p>
+                <p>Período: <span id="acompanhamentoPeriodo"></span></p>
+                <p>Carga Horária Semanal: <span id="acompanhamentoCargaHoraria"></span> horas</p>
+                <p>Status: <strong id="acompanhamentoStatusEstagio"></strong></p>
+            </div>
+
+            <div id="areaDocumentosAcoes" style="margin-top: 30px;">
+                </div>
+            <p id="mensagemEstagioSucesso" class="mensagem-sucesso"></p>
+            <p id="mensagemEstagioErro" class="mensagem-erro"></p>
+
+            <h2 style="margin-top: 30px;">Histórico de Documentos e Interações</h2>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Status/Feedback</th>
+                            <th>Documento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historicoDocumentosEstagio">
+                        </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-voltar" onclick="window.location.href='estagio_meus_estagios_aluno.html'">Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
